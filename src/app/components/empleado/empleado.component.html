@@ -1,0 +1,25 @@
+<h1>INFORMACION</h1>
+<p>Nombre: {{nombre.value}}</p>
+<p>Empresa: {{empresa.value}}</p>
+<h2>DIGITE INFORMACION</h2>
+<p>Nombre: </p> <input type="text" #nombre (keyup)="0">
+<p>Empresa: </p> <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+<br>
+{{textoRegisto}}
+<br>
+<br>
+Registado: <input type="radio" name="redondo" id="registor" (click)="setusuarioRegistrado($event)" value="si">
+<br>
+<br>
+No registrado: <input type="radio" name="redondo" value="no" (click)="setusuarioRegistrado($event)">
+<br>
+<br>
+<p>input de texto (Consulta la consola del navegador)</p>
+<input (input)="onInputChange($event)" placeholder="escribe un texto que se vera en la consola">
+<br>
+<br>
+<div (mouseover)="onMouseOver()">Pasa el mouse sobre mí y consulta la consola del navegador</div>
+<br>
+<br>
+<p>binding bidireccional</p>
